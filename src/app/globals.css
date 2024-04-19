@@ -2,32 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body{
+  scroll-behavior: smooth;
+}
+
+input {
+  outline: none;
+}
+
+.bg-img {
+  background-image: url("/engage.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-mural-light {
+  background-image: url("/mural-light.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-mural-dark {
+  background-image: url("/mural-dark.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-section {
+  background-image: url("https://mercatoandcompany.com/wp-content/uploads/brownsville-store-2048x1366.webp");
+  background-position: center;
+  background-size: contain;
+}
+
+.vertical-text {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+.shadow-flag {
+  box-shadow: 7px 8px 5px 4px rgba(0, 0, 0, 0.5);
+}
+.bg-market-image {
+  background-image: url("https://mercatoandcompany.com/wp-content/uploads/brownsville-store-2048x1366.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .bg-mural-dark {
+    background-image: none;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.scroll-bar::-webkit-scrollbar {
+  -webkit-appearance: none;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.scroll-bar::-webkit-scrollbar-button:increment,
+.scroll-bar::-webkit-scrollbar-button {
+  display: none;
+}
+
+.scroll-bar::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  background-color: #929292cc;
+  border-radius: 10px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.h-news-show{
+  height: auto;
+  padding: 2rem;
+}
+
+.h-news-hidden{
+  height: 0;
 }
